@@ -3,20 +3,24 @@ require('styles/App.css');
 
 import React from 'react';
 
-let yeomanImage = require('../images/yeoman.png');
 
 class AppComponent extends React.Component {
   render() {
-    return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
+      return (
+              <h1>Hello, {this.props.name}</h1>
     );
   }
 }
 
 AppComponent.defaultProps = {
 };
+
+export class Test extends React.Component {
+    render(){
+        return (
+                <h1>Hello, {this.props.name}</h1>
+        )
+    }
+}
 
 export default AppComponent;
